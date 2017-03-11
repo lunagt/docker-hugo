@@ -12,6 +12,7 @@ RUN apk add --update wget ca-certificates && \
   rm /var/cache/apk/*
   
 COPY ./entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 VOLUME ["/src", "/destination"]
 
